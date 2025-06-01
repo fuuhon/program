@@ -30,14 +30,17 @@
   </div>
   <!-- Halaman User -->
   <div id="halaman-user" class="halaman">
-  <div class="film-list">
+    <h1>Selamat datang, <span style="color: rgb(195, 0, 0);">Pengguna!</span></h1>
+    <p>Mau <span class="spn">  Nonton </span> apa hari ini :D.</p>
+    
+  <!-- Ganti bagian film-list dengan ini -->
+<div class="film-list">
     <div v-for="film in films" :key="film.kode" class="film-card" @click="bukaHalamanFilm(film.kode)">
-      <img :src="film.poster_url || 'static/img/default.jpg'" :alt="film.judul" class="film-poster">
-      <h3>{{ film.judul }}</h3>
-      <p>{{ film.deskripsi }}</p>
-      <span class="price">Rp {{ film.harga | formatCurrency }}</span>
+        <img :src="film.poster_url" :alt="film.judul" class="film-poster">
+        <h3>{{ film.judul }}</h3>
+        <p>{{ film.deskripsi }}</p>
+        <span class="price">Rp {{ film.harga.toLocaleString('id-ID') }}</span>
     </div>
-  </div>
 </div>
 
 <!-- Tambahkan sebelum </body> -->
