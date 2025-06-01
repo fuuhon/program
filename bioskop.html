@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>bioskop</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="sc.js"></script>
+</head>
+<body>
+
+  <!-- Halaman Utama -->
+
+  <script>
+    const currentUser = {
+        username: "{{ session.username }}",
+        role: "{{ session.role }}"
+    };
+</script>
+  <div id="halaman-utama">
+    <div class="con2">
+      <img src="absolute.png" alt="" class="img1" />
+    </div>
+    <section id="c1">
+      <div class="con3">
+        <img src="usr.svg" alt="User" class="img2" onclick="bukaHalaman('user')"/>
+        <img src="adm.svg" alt="Admin" class="img2" onclick="bukaHalaman('admin')"/>
+      </div>
+    </section>
+  </div>
+  <!-- Halaman User -->
+  <div id="halaman-user" class="halaman">
+  <div class="film-list">
+    <div v-for="film in films" :key="film.kode" class="film-card" @click="bukaHalamanFilm(film.kode)">
+      <img :src="film.poster_url || 'static/img/default.jpg'" :alt="film.judul" class="film-poster">
+      <h3>{{ film.judul }}</h3>
+      <p>{{ film.deskripsi }}</p>
+      <span class="price">Rp {{ film.harga | formatCurrency }}</span>
+    </div>
+  </div>
+</div>
+
+<!-- Tambahkan sebelum </body> -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</div>
+        
+    <button onclick="kembali()" class="btn1">Kembali</button>
+
+  </div>
+
+  <!-- Halaman Admin -->
+  <div id="halaman-admin" class="halaman">
+    <h1>Selamat datang, Admin!</h1>
+    <p>Ini adalah halaman untuk admin.</p>
+    <div>
+    </div>
+    <button onclick="kembali()">Kembali</button>
+  </div>
+<!--halaman detail film -->
+  <div id="halaman-film" class="halaman">
+    <h1>DETAIL<span style="color: rgb(201, 0, 34);"> FILM</span></h1> <br><br>
+    <div class="ccon3">
+    <div class="con4">
+    <img src="abs1.png" alt="" class="img4">
+    <button class="btn2" onclick="bukaHalaman('tiket')">PESAN TIKET</button>
+    </div>
+    <div class="con5">
+    <h2 class="hh2" style="color: aliceblue;">ABSOLUTE CINEMAS</h2>
+    <p class="pp">Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Aliquid nesciunt at neque sapiente 
+      deleniti! <br>Nobis, pariatur voluptatum delectus atque qui 
+      laudantium quasi dolorum accusantium,<br> molestiae facere, dolore consequuntur <br>nam voluptatem.</p>
+      <span class="spn">SUTRADARA : <span class="spn2"> BAEK JHI NGAN</span></span><br>
+      <span class="spn">DURASI : <span class="spn2"> 120 HOURS</span></span><br>
+      <span class="spn">RATING USIA : <span class="spn2"> 18+</span></span><br>
+      <span class="spn">TANGGAL MAIN : <span class="spn2"> 18 JANUARI 1999</span></span><br>
+      <span class="spn">JAM TAYANG : <span class="spn2"> 13.30-15.30</span></span><br>
+    </div>
+  </div>
+  </div>
+<!-- Halaman tiket -->
+  <div id="halaman-tiket" class="halaman">
+    <h1>PESANAN TIKET!</h1>
+    <p>Ini adalah halaman untuk pesan tiket.</p>
+    <div class="form" style="text-align: left; margin-left: 37%;">
+      <label for="" class="lbl"> <span style="background-color: rgb(255, 0, 0); color: aliceblue; padding: 5px;">NAMA <span></span></label >
+      <input type="text" name="" id="username" class="inp"> <br><br>
+
+      <label for="" class="lbl"> <span style="background-color: rgb(255, 0, 0); color: aliceblue; padding: 5px;">JUDUL FILM <span></span></label >
+      <input type="text" name="" id="film" class="inp"> <br><br>
+
+      <label for="" class="lbl"> <span style="background-color: rgb(255, 0, 0); color: aliceblue; padding: 5px;">TANGGAL <span></span></label >
+      <input type="date" name="" id="tanggal" class="inp"> <br><br>
+
+      <label for="" class="lbl"> <span style="background-color: rgb(255, 0, 0); color: aliceblue; padding: 5px;">JAM <span></span></label >
+      <input type="number" name="" id="sesi" class="inp"> <br><br>
+
+      <label for="" class="lbl"> <span style="background-color: rgb(255, 0, 0); color: aliceblue; padding: 5px;">STUDIO <span></span></label >
+      <select id="studio" name="menu">
+       <option value="">-- Pilih --</option>
+       <option value="REGULER">STUDIO REGULER </option>
+       <option value="PREMIERE">STUDIO PREMIERE (Tambah RP 20.000 )</option>
+    
+  </select>
+    </div>
+    <h1>Pemilihan <span style="color: red;">Kursi</span> </h1>
+    <div class="conkursi">
+    <img id="A1" src="1a.png" alt="Kursi A1" class="kursi" onclick="pilihKursi('A1')">
+<img id="A2" src="2a.png" alt="Kursi A2" class="kursi" onclick="pilihKursi('A2')">
+<img id="A3" src="3a.png" alt="Kursi A3" class="kursi" onclick="pilihKursi('A3')">
+<img id="A4" src="4a.png" alt="Kursi A4" class="kursi" onclick="pilihKursi('A4')">
+
+<img id="A5" src="5a.png" alt="Kursi A5" class="kursi" onclick="pilihKursi('A5')">
+<img id="A6" src="6a.png" alt="Kursi A6" class="kursi" onclick="pilihKursi('A6')"> <br>
+<img id="B1" src="1b.png" alt="Kursi B1" class="kursi" onclick="pilihKursi('B1')">
+<img id="B2" src="2b.png" alt="Kursi B2" class="kursi" onclick="pilihKursi('B2')">
+
+<img id="B3" src="3b.png" alt="Kursi B3" class="kursi" onclick="pilihKursi('B3')">
+<img id="B4" src="4b.png" alt="Kursi B4" class="kursi" onclick="pilihKursi('B4')">
+<img id="B5" src="5b.png" alt="Kursi B5" class="kursi" onclick="pilihKursi('B5')">
+<img id="B6" src="6b.png" alt="Kursi B6" class="kursi" onclick="pilihKursi('B6')"><br>
+
+<img id="C1" src="1c.png" alt="Kursi C1" class="kursi" onclick="pilihKursi('C1')">
+<img id="C2" src="2c.png" alt="Kursi C2" class="kursi" onclick="pilihKursi('C2')">
+<img id="C3" src="3c.png" alt="Kursi C3" class="kursi" onclick="pilihKursi('C3')">
+<img id="C4" src="4c.png" alt="Kursi C4" class="kursi" onclick="pilihKursi('C4')">
+
+<img id="C5" src="5c.png" alt="Kursi C5" class="kursi" onclick="pilihKursi('C5')">
+<img id="C6" src="6c.png" alt="Kursi C6" class="kursi" onclick="pilihKursi('C6')"> <br>
+<img id="D1" src="1d.png" alt="Kursi D1" class="kursi" onclick="pilihKursi('D1')">
+<img id="D2" src="2d.png" alt="Kursi D2" class="kursi" onclick="pilihKursi('D2')">
+
+<img id="D3" src="3d.png" alt="Kursi D3" class="kursi" onclick="pilihKursi('D3')">
+<img id="D4" src="4d.png" alt="Kursi D4" class="kursi" onclick="pilihKursi('D4')">
+<img id="D5" src="5d.png" alt="Kursi D5" class="kursi" onclick="pilihKursi('D5')">
+<img id="D6" src="6d.png" alt="Kursi D6" class="kursi" onclick="pilihKursi('D6')"><br>
+
+    </div>
+    <textarea id="output" readonly placeholder="Kursi yang dipilih..."></textarea>
+    <button onclick="kembali()" class="btn3">Kembali</button>
+    <button onclick="bukaHalaman('makanan')" class="btn3">PILIH MAKANAN</button>
+    <button onclick="bukaHalaman('cetaktiket'); tampilkan();" class="btn3">SUBMIT</button>
+
+  </div>
+    </div>
+  <div id="halaman-makanan" class="halaman">
+
+    <div class="con6">
+      <h1><span style="background-color: red; padding: 4px;">PILIHAN MAKANAN </span></h1>
+      <img id="D5" src="d5.png" onclick="fnb('D5', 'POP CORN CARAMEL - RP 35000')" class="makanan">
+      <img id="D5" src="d6.png" onclick="fnb('D6', 'POP CORN BUTTER - RP 35000')" class="makanan">
+      <img id="D7" src="d7.png" onclick="fnb('D7', 'POP CORN CHEESE - RP 15000')" class="makanan">
+      <img id="D8" src="d8.png" onclick="fnb('D8', 'POP CORN SPICY - RP 20000')" class="makanan"><br>
+       <img id="D9" src="d9.png" onclick="fnb('D9', 'HOT DRAGON - RP 10000')" class="makanan">
+       <img id="D10" src="d10.png" onclick="fnb('D10', 'FRIED SPICY POTATO - RP 18000')" class="makanan">
+       <img id="D11" src="d11.png" onclick="fnb('D11', 'FRIED POTATO - RP 12000')" class="makanan">
+      <h1><span style="background-color: red; padding: 4px;">PILIHAN MINUMAN </span></h1>
+      <img id="D4" src="d4.png" onclick="fnb('D4', 'LEMON SODA - RP 15000')" class="makanan">
+      <img id="D3" src="d3.png" onclick="fnb('D3', 'ICED TEA - RP 8000')" class="makanan">
+       <img id="D2" src="d2.png" onclick="fnb('D2', 'BLOOD DEMON - RP 10000')" class="makanan">
+       <img id="D1" src="d1.png" onclick="fnb('D1', 'HEAVENLY ICE CREAM - RP 5000')" class="makanan"><br>
+      <p>Pesanan Anda:</p>
+      <textarea id="outputmkn" rows="6" cols="40" readonly></textarea>
+
+      <p>Total Harga:</p>
+       <input type="text" id="totalHarga" readonly>
+
+      <button onclick="bukaHalaman('cetaktiket'); tampilkan()">Submit</button>
+    </div>
+  </div>
+
+  <div id="halaman-cetaktiket" class="halaman">
+    <h1></h1>
+    <div>
+     
+      <h2 id="judul"> </h2>
+    </div>
+  </div>
+
+
+ 
+</body>
+</html>

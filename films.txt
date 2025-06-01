@@ -1,0 +1,12 @@
+CVL01|Civil War|Perang saudara di Amerika masa depan yang penuh konflik politik|2024|109|Alex Garland|Action, Drama|17|70000|Selasa,Jumat|16:00,21:00|civilwar.jpg
+PGS02|Pengabdi Setan 2: Communion|Keluarga Rini kembali diteror oleh kekuatan gaib di rumah susun|2022|119|Joko Anwar|Horror, Thriller|17|60000|Jumat,Minggu|18:30,22:00|satan.jpg
+AVG01|Avengers: Endgame|Pertarungan epik melawan Thanos|2019|181|Russo Brothers|Action, Sci-Fi|13|75000|Senin,Kamis|14:00,19:30|avenger.jpg
+PSH01|The Pursuit of Happyness|Kisah nyata perjuangan seorang ayah demi masa depan anaknya|2006|117|Gabriele Muccino|Drama, Biography|SU|50000|Rabu,Minggu|13:30,19:00|pursuit.jpg
+MNH01|Monster Hunter|Pasukan militer terdampar di dunia monster raksasa|2020|104|Paul W. S. Anderson|Action, Fantasy|13|65000|Kamis,Senin|15:00,20:00|monter.jpg
+BGF04|The Big 4|Aksi empat mantan pembunuh bayaran yang bekerja sama melawan musuh lama|2022|141|Timo Tjahjanto|Action, Comedy|17|60000|Sabtu,Minggu|16:00,21:00|big4.jpg
+FGT01|Fighter|Kisah pilot tempur India yang menghadapi ancaman teror dari udara|2024|146|Siddharth Anand|Action, Drama|13|70000|Senin,Kamis|17:00,21:30|fighter.jpg
+BTW01|World War Z|Wabah zombie global mengancam peradaban manusia|2013|116|Marc Forster|Action, Horror|17|60000|Rabu,Jumat|18:00,22:00|wwz.jpg
+TLU01|The Last of Us|Perjalanan dua orang di dunia pasca-apokaliptik melawan infeksi jamur mematikan|2023|85|Craig Mazin|Drama, Horror|17|70000|Selasa,Kamis|19:00,21:00|the last.jpg
+GWL01|The Great Wall|Pertempuran antara pasukan elite Tiongkok dan monster di Tembok Besar|2016|103|Zhang Yimou|Action, Fantasy|13|55000|Sabtu,Minggu|14:00,18:30|great.jpg
+MSL01|Mosul|Pasukan khusus Irak bertempur untuk merebut kembali kota dari ISIS|2019|101|Matthew Michael Carnahan|Action, War|17|60000|Selasa,Jumat|17:00,21:00|mosul.jpg
+

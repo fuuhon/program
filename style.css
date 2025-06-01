@@ -1,0 +1,211 @@
+body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-image: url(bg1.png);
+      background-size: cover;
+      
+      background-repeat: no-repeat;
+      font-family: sans-serif;
+      color: white;
+    }
+    .img1 {
+      width: 40%;
+      height: auto;
+    }
+    .img2 {
+      width: 10%;
+      height: auto;
+      margin: 4%;
+      cursor: pointer;
+       transition: transform 0.1s ease;
+      cursor: pointer;
+    }
+   .img2:hover {
+      transform: scale(1.1);}
+
+    .img3:hover {
+      transform: scale(1.1);
+      filter: brightness(1.3);
+    }
+    .img3 {
+      width: 15%;
+      height: auto;
+      margin: 4%;
+      cursor: pointer;
+      transition: filter 0.1s ease,transform 0.1s ease;
+      cursor: pointer;
+    }
+    .img4 {
+      width: 20%;
+      height: auto;
+      margin: 4%;
+    }
+    .con2 {
+      text-align: center;
+      margin-top: 10%;
+    }
+    .con3 {
+      text-align: center;
+      margin: 4%;
+    }
+    .ccon3 {
+  background-color: rgba(0, 0, 0, 0.5); /* hitam dengan transparansi 50% */
+  color: white; /* warna teks yang jelas */
+  margin: 10%;
+  margin-top: -3%;
+  padding: 2%;
+  border-radius: 5px;
+}
+
+    .con4{
+      text-align: left;
+      margin-left: 5%;
+    }
+    .con5{
+      text-align: left;
+      margin-left: 30%;
+      position: relative;
+      margin-top: -33%;
+      size: 20%;
+    }
+    .halaman {
+      display: none;
+      text-align: center;
+      margin-top: 10%;
+    }
+    .spn{
+        color: red;
+        font-weight: bold;
+        font-size: 70%;
+    }
+    .spn2{ 
+        
+         
+        color: rgb(255, 255, 255);
+    }
+    .pp {
+      font-size: small;
+      color: rgb(255, 255, 255);
+    }
+    .btn2{
+      background-color: red;
+      color: aliceblue;
+      padding: 5px;
+      border-radius: 5px;
+       margin: 2%;
+      cursor: pointer;
+      transform: scale(1.1);
+      text-align: left;
+      position: relative;
+      margin-left: -22%;
+      font-weight: bold;
+    }
+
+    .btn2:hover{
+      background-color: rgb(214, 214, 214);
+      color: black;
+    }
+    .lbl{
+      margin-right: 10px;
+    }
+    .inp{
+      font-weight: bold;
+      padding: 3px;
+      border-radius: 5px;
+      background-color: rgb(228, 242, 255);
+      transition: transform 0.1s ease;
+    }
+    .inp:hover {
+      background-color: aliceblue;
+      transform: scale(1.1);
+
+    }
+    .btn3{
+      background-color: red;
+      color: aliceblue;
+      padding: 5px;
+      border-radius: 5px;
+       margin: 2%;
+      cursor: pointer;
+      transform: scale(1.1);
+      text-align: center;
+      margin-left: 3%;
+      border: none;
+     
+      
+      font-weight: bold;
+    }
+
+    .btn3:hover{
+      background-color: rgb(214, 214, 214);
+      color: black;
+       transform: scale(1.1);
+    }
+    option {
+      padding: 3px;
+    }
+    .kursi{
+      width: 3%;
+      margin: 2%;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      filter: hue-rotate(0deg);
+    }
+
+    .kursi:hover{
+      transform: scale(1.1);
+    }
+
+    textarea {
+      width: 300px;
+      height: 100px;
+      margin-top: 20px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      resize: none;
+    }
+    .conkursi {
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+
+    .dipilih {
+      filter: hue-rotate(120deg) saturate(5) ;  } /* Warna berubah ke merah/hijau tergantung gambar awal */
+
+
+    .makanan{
+      width: 10%;
+      margin: 2%;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      
+    }
+
+    .makanan:hover{
+      transform: scale(1.1);
+    }
+
+    .tkt {
+      width: 50%;
+    }
+
+    #halaman-cetaktiket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+#halaman-cetaktiket pre {
+  background-color: #fffbea;
+  color: #333;
+  font-family: 'Courier New', Courier, monospace;
+  border: 2px dashed #999;
+  padding: 20px;
+  border-radius: 10px;
+  white-space: pre-wrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
